@@ -1,0 +1,125 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.inner {
+    width: var(--desktop-width);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #feb272;
+    padding-bottom: 16px;
+    border-radius: 5px;
+}
+
+.header {
+    margin-top: 16px;
+}
+
+.form {
+    display: flex;
+    margin-top: 16px;
+    width: var(--desktop-width);
+    padding: 0 16px;
+
+    input {
+        flex: 1;
+        border-radius: 5px;
+    }
+
+    input:not(:placeholder-shown) {
+        font-style: normal;
+        ~ .add-btn {
+            color: white;
+        }
+    }
+}
+
+.input-todo {
+    padding-left: 8px;
+    font-style: italic;
+    &:focus {
+        outline: 2px solid green;
+    }
+}
+
+.todo-list {
+    width: var(--desktop-width);
+    font-size: 1.9rem;
+    margin-top: 16px;
+    padding: 0 16px;
+    border-radius: 5px;
+}
+
+.todo-item {
+    display: flex;
+    background-color: white;
+    padding: 8px;
+    flex-direction: column;
+    justify-content: center;
+    line-height: 1.6rem;
+
+    ~ .todo-item {
+        border-top: 1px solid #ccc;
+    }
+
+    &:first-child {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+    }
+
+    &:last-child {
+        border-bottom-left-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+}
+
+.show-todo {
+    display: flex;
+    align-items: center;
+}
+.checkbox-todo {
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+}
+.desc-todo {
+    padding-left: 8px;
+    flex: 1;
+    word-wrap: break-word;
+    line-height: 2.2rem;
+    max-width: 540px;
+}
+
+.edit-btn {
+    padding-right: 8px;
+    cursor: pointer;
+}
+
+.edit-input {
+    outline: 1px solid green;
+    width: 532px;
+    margin-left: 28px;
+    height: 36px;
+    border-radius: 5px;
+    padding-left: 8px;
+    margin-top: 8px;
+    font-style: italic;
+
+    &:not(:placeholder-shown) {
+        font-style: normal;
+    }
+}
+
+.delete-todo {
+    padding: 4px;
+    font-size: 2.2rem;
+    cursor: pointer;
+    user-select: none;
+}
+
+.complete {
+    color: #ccc;
+    text-decoration: line-through;
+}
