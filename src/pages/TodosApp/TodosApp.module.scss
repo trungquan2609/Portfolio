@@ -1,6 +1,7 @@
 .wrapper {
     display: flex;
     justify-content: center;
+    margin-top: 60px;
 }
 
 .inner {
@@ -122,4 +123,52 @@
 .complete {
     color: #ccc;
     text-decoration: line-through;
+}
+
+.footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+    width: 620px;
+    border-radius: 5px;
+}
+.check-all {
+    cursor: pointer;
+    padding: 8px;
+    display: flex;
+}
+.desc {
+    font-size: 1.9rem;
+    padding-left: 8px;
+    user-select: none;
+}
+.action {
+    padding-right: 16px;
+    line-height: 2.2rem;
+}
+.action-item {
+    font-size: 1.9rem;
+    position: relative;
+    padding: 2px 8px;
+    cursor: pointer;
+
+    ~ .action-item {
+        margin-left: 8px;
+
+        &::after {
+            content: '';
+            position: absolute;
+            border-left: 1px solid black;
+            height: 24px;
+            left: -5px;
+        }
+    }
+}
+
+.active {
+    background-color: #ccc;
+    border-radius: 5px;
+    font-style: italic;
+    user-select: none;
 }
