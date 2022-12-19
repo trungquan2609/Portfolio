@@ -23,7 +23,7 @@ const reducerTodo = (todos, action) => {
             });
             return todoList;
         case ACTION.EDITED_TODO:
-            todoList = todos.map((todo) => {
+            todoList = todoList.map((todo) => {
                 if (todo.id === action.payload.id) {
                     return {
                         ...todo,
@@ -33,10 +33,11 @@ const reducerTodo = (todos, action) => {
                 }
                 return todo;
             });
+            localStorage.setItem('todosList', JSON.stringify(todoList));
             return todoList;
 
         case ACTION.CANCEL_EDIT_TODO:
-            return todos.map((todo) => {
+            return todoList.map((todo) => {
                 return { ...todo, editing: false };
             });
         case ACTION.DELETE_TODO:
