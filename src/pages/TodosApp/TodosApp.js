@@ -14,7 +14,7 @@ function TodosApp() {
     // const storeTodos = JSON.parse(localStorage.getItem('todosList'));
     // console.log(storeTodos);
     const getStoreTodos = useCallback(() => {
-        const storeTodos = JSON.parse(localStorage.getItem('todosList'));
+        const storeTodos = JSON.parse(localStorage.getItem('todosList')) || [];
         return storeTodos;
     }, []);
     const [inputAdd, setInput] = useState('');
