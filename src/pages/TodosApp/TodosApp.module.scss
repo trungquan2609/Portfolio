@@ -1,5 +1,3 @@
-@import './responsive.module.scss';
-
 .wrapper {
     display: flex;
     justify-content: center;
@@ -175,30 +173,56 @@
     user-select: none;
 }
 
-@media screen and (max-width: 425px) {
+@media screen and (max-width: 425px) and (min-width: 376px) {
     .inner {
-        width: var(--mobile-width);
+        width: calc(var(--mobile-width-l) - 8px);
     }
 
     .form {
-        width: var(--mobile-width);
+        width: calc(var(--mobile-width-l) - 8px);
     }
 
     .todo-list {
-        width: var(--mobile-width);
+        width: calc(var(--mobile-width-l) - 8px);
     }
 
     .desc-todo {
-        max-width: calc(var(--mobile-width) - 112px);
+        max-width: calc(var(--mobile-width-l) - 8px - 112px);
     }
 
     .edit-input {
-        width: calc(var(--mobile-width) - 120px);
+        width: calc(var(--mobile-width-l) - 8px - 120px);
     }
 
     .footer {
-        display: flex;
         flex-direction: column;
-        width: var(--mobile-width);
+        width: calc(var(--mobile-width-l) - 8px);
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .inner {
+        width: calc(var(--mobile-width-m) - 16px);
+    }
+
+    .form {
+        width: calc(var(--mobile-width-m) - 16px);
+    }
+
+    .todo-list {
+        width: calc(var(--mobile-width-m) - 16px);
+    }
+
+    .desc-todo {
+        max-width: calc(var(--mobile-width-m) - 16px - 112px);
+    }
+
+    .edit-input {
+        width: calc(var(--mobile-width-m) - 16px - 120px);
+    }
+
+    .footer {
+        flex-direction: column;
+        width: calc(var(--mobile-width-m) - 16px);
     }
 }

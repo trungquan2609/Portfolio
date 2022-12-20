@@ -1,7 +1,8 @@
 :root {
     --text-color: black;
 
-    --mobile-width: 425px;
+    --mobile-width-m: 374px;
+    --mobile-width-l: 425px;
     --desktop-width: 652px;
 }
 
