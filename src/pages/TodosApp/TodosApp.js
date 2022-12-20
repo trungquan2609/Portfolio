@@ -19,7 +19,6 @@ function TodosApp() {
     const [inputAdd, setInput] = useState('');
     const [editInput, setEditInput] = useState('');
     const [activeTab, setActiveTab] = useState(ACTION.FILTER_ALL);
-    const [isCompleteAllTab, setIsCompleteAllTab] = useState(true);
     const [todos, dispatchTodo] = useReducer(reducerTodo, getStoreTodos());
     // const [data, setData] = useState(todos);
 
@@ -31,7 +30,7 @@ function TodosApp() {
         if (activeTab !== ACTION.FILTER_FINISHED) {
             const storeLengthTodo = todos.length;
             const finishedLengthTodo = todos.filter((todo) => todo.complete === true).length;
-            if (storeLengthTodo === finishedLengthTodo && completeAllRef) {
+            if (storeLengthTodo === finishedLengthTodo) {
                 completeAllRef.current.checked = true;
             } else {
                 completeAllRef.current.checked = false;
@@ -91,7 +90,6 @@ function TodosApp() {
 
     const handleActionClick = (action) => {
         setActiveTab(action);
-        setIsCompleteAllTab(action !== ACTION.FILTER_FINISHED);
         dispatchTodo({ type: action });
     };
 
@@ -187,15 +185,17 @@ function TodosApp() {
                 </div>
                 <footer className={cx('footer')}>
                     <div className={cx('check-all')}>
-                        {isCompleteAllTab && (
+                        {activeTab !== ACTION.FILTER_FINISHED && (
                             <Fragment>
                                 <input
+                                    style={{ display: todos.length > 0 ? 'flex' : 'none' }}
                                     type="checkbox"
                                     ref={completeAllRef}
                                     className={cx('checkbox-todo')}
                                     onChange={handleCompleteAll}
                                 />
                                 <span
+                                    style={{ display: todos.length > 0 ? 'flex' : 'none' }}
                                     className={cx('desc')}
                                     onClick={handleCompleteAll}
                                 >

@@ -1,0 +1,27 @@
+@media screen and (max-width: 321px) {
+    .inner {
+        width: var(--mobile-width);
+    }
+
+    .form {
+        width: var(--mobile-width);
+    }
+
+    .todo-list {
+        width: var(--mobile-width);
+    }
+
+    .desc-todo {
+        max-width: calc(var(--mobile-width) - 112px);
+    }
+
+    .edit-input {
+        width: calc(var(--mobile-width) - 120px);
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        width: var(--mobile-width);
+    }
+}

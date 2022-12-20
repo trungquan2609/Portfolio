@@ -1,6 +1,7 @@
 :root {
     --text-color: black;
 
+    --mobile-width: 425px;
     --desktop-width: 652px;
 }
 

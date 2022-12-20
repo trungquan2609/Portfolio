@@ -1,3 +1,5 @@
+@import './responsive.module.scss';
+
 .wrapper {
     display: flex;
     justify-content: center;
@@ -90,7 +92,7 @@
     flex: 1;
     word-wrap: break-word;
     line-height: 2.2rem;
-    max-width: 540px;
+    max-width: calc(var(--desktop-width) - 112px);
 }
 
 .edit-btn {
@@ -100,7 +102,7 @@
 
 .edit-input {
     outline: 1px solid green;
-    width: 532px;
+    width: calc(var(--desktop-width) - 120px);
     margin-left: 28px;
     height: 36px;
     border-radius: 5px;
@@ -135,7 +137,7 @@
 }
 .check-all {
     cursor: pointer;
-    padding: 8px;
+    padding: 1px 8px;
     display: flex;
 }
 .desc {
@@ -145,7 +147,7 @@
 }
 .action {
     padding-right: 16px;
-    line-height: 2.2rem;
+    line-height: 2.1rem;
 }
 .action-item {
     font-size: 1.9rem;
@@ -171,4 +173,32 @@
     border-radius: 5px;
     font-style: italic;
     user-select: none;
+}
+
+@media screen and (max-width: 425px) {
+    .inner {
+        width: var(--mobile-width);
+    }
+
+    .form {
+        width: var(--mobile-width);
+    }
+
+    .todo-list {
+        width: var(--mobile-width);
+    }
+
+    .desc-todo {
+        max-width: calc(var(--mobile-width) - 112px);
+    }
+
+    .edit-input {
+        width: calc(var(--mobile-width) - 120px);
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        width: var(--mobile-width);
+    }
 }
