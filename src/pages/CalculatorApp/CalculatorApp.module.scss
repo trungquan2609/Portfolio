@@ -1,0 +1,55 @@
+.wrapper {
+    display: flex;
+    justify-content: center;
+}
+.inner {
+    background-color: #211e27;
+    width: 320px;
+    padding-bottom: 8px;
+}
+.output {
+    text-align: right;
+    margin-top: 4px;
+    margin-right: 5px;
+}
+.previous-operand {
+    color: #a1a1a1;
+    font-size: 3rem;
+    height: 34px;
+}
+
+.current-operand {
+    background-color: #211e27;
+    color: white;
+    font-size: 4.7rem;
+    text-align: right;
+    width: 304px;
+    height: 54px;
+}
+.btn-list {
+    padding: 0 5px;
+    background-color: #211e27;
+}
+
+.btn-action {
+    width: 76px;
+    height: 50px;
+    color: white;
+    background-color: #323232;
+    border-radius: 5px;
+    cursor: pointer;
+    user-select: none;
+
+    + .btn-action {
+        margin-left: 2px;
+        margin-top: 2px;
+    }
+
+    &:hover {
+        background-color: #3d3a43;
+    }
+}
+
+.btn-two {
+    width: 154px;
+}

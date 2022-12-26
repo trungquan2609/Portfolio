@@ -38,6 +38,10 @@ function TodosApp() {
         }
     }, [todos, activeTab]);
 
+    useEffect(() => {
+        document.title = 'Todo app';
+    }, []);
+
     const handleAdd = () => {
         if (inputAdd.trim() !== '' && !inputAdd.trim().startsWith(' ')) {
             dispatchTodo({ type: ACTION.ADD_TODO, payload: { todo: inputAdd } });

@@ -16,6 +16,9 @@ function Header() {
                     <li className={cx('todo-item')}>
                         <Link to="/todosapp">Todos App</Link>
                     </li>
+                    <li className={cx('todo-item')}>
+                        <Link to="/calculator">Calculator</Link>
+                    </li>
                 </ul>
             </nav>
         </header>
