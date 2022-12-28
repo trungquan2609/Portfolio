@@ -36,7 +36,6 @@ function CalculatorApp() {
         } else {
             currentOperandRef.current.style.fontSize = '4.7rem';
         }
-        console.log(currentOperandLength);
     });
 
     return (
