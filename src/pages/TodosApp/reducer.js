@@ -105,10 +105,10 @@ const reducerTodo = (todos, action) => {
             return todoList;
         case ACTION.FILTER_DOING:
             todoList = JSON.parse(localStorage.getItem('todosList'));
-            return todoList.filter((todo) => todo.complete === false);
+            return todoList?.filter((todo) => todo.complete === false);
         case ACTION.FILTER_FINISHED:
             todoList = JSON.parse(localStorage.getItem('todosList'));
-            return todoList.filter((todo) => todo.complete === true);
+            return todoList?.filter((todo) => todo.complete === true);
         default:
             return console.log('wrong action type');
     }

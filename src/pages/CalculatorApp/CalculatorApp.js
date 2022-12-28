@@ -21,6 +21,7 @@ const formatOperand = (operand) => {
 };
 
 function CalculatorApp() {
+    // eslint-disable-next-line no-unused-vars
     const [{ currentOperand, previousOperand, operation, isNegative = false }, dispatch] = useReducer(reducerCalc, {});
 
     const currentOperandRef = useRef();

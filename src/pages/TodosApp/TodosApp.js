@@ -1,4 +1,3 @@
-/* eslint-disable no-const-assign */
 import { useReducer, useState, useRef, useCallback, Fragment, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPenToSquare } from '@fortawesome/free-regular-svg-icons';
@@ -20,7 +19,6 @@ function TodosApp() {
     const [editInput, setEditInput] = useState('');
     const [activeTab, setActiveTab] = useState(ACTION.FILTER_ALL);
     const [todos, dispatchTodo] = useReducer(reducerTodo, getStoreTodos());
-    // const [data, setData] = useState(todos);
 
     const inputRef = useRef();
     const editInputRef = useRef();
@@ -28,8 +26,8 @@ function TodosApp() {
 
     useEffect(() => {
         if (activeTab !== ACTION.FILTER_FINISHED) {
-            const storeLengthTodo = todos.length;
-            const finishedLengthTodo = todos.filter((todo) => todo.complete === true).length;
+            const storeLengthTodo = todos?.length;
+            const finishedLengthTodo = todos?.filter((todo) => todo.complete === true).length;
             if (storeLengthTodo === finishedLengthTodo) {
                 completeAllRef.current.checked = true;
             } else {
@@ -121,7 +119,7 @@ function TodosApp() {
                     />
                 </form>
                 <div className={cx('todo-list')}>
-                    {todos.map((todo, index) => {
+                    {todos?.map((todo, index) => {
                         return (
                             <div
                                 className={cx('todo-item')}
@@ -192,14 +190,14 @@ function TodosApp() {
                         {activeTab !== ACTION.FILTER_FINISHED && (
                             <Fragment>
                                 <input
-                                    style={{ display: todos.length > 0 ? 'flex' : 'none' }}
+                                    style={{ display: todos?.length > 0 ? 'flex' : 'none' }}
                                     type="checkbox"
                                     ref={completeAllRef}
                                     className={cx('checkbox-todo')}
                                     onChange={handleCompleteAll}
                                 />
                                 <span
-                                    style={{ display: todos.length > 0 ? 'flex' : 'none' }}
+                                    style={{ display: todos?.length > 0 ? 'flex' : 'none' }}
                                     className={cx('desc')}
                                     onClick={handleCompleteAll}
                                 >
