@@ -18,6 +18,7 @@ html {
 
 body {
     overflow-y: overlay;
+    /* overflow-x: hidden; */
 }
 
 a {

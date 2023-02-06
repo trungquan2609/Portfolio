@@ -1,6 +1,5 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import routes from './routes';
-import DefaultLayout from './layouts';
 
 function App() {
     return (
@@ -12,11 +11,7 @@ function App() {
                         <Route
                             key={index}
                             path={route.path}
-                            element={
-                                <DefaultLayout>
-                                    <Page />
-                                </DefaultLayout>
-                            }
+                            element={<Page />}
                         />
                     );
                 })}

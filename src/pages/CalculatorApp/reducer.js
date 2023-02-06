@@ -73,10 +73,11 @@ const reducerCalc = (state, { type, payload }) => {
                     currentOperand: `${state.currentOperand.slice(1)}`,
                 };
             }
+
             return {
                 ...state,
                 isNegative: !state.isNegative,
-                currentOperand: `-${state.currentOperand}`,
+                currentOperand: `-${parseFloat(state.currentOperand)}`,
             };
         case ACTION.EVALUATE:
             if (state.operation == null || state.currentOperand == null || state.previousOperand == null) {
