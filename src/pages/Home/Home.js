@@ -293,6 +293,9 @@ function Home() {
                                 <i className="devicon-mysql-plain colored"></i>
                             </div>
                             <div className="languages-item">
+                                <i className="devicon-amazonwebservices-original colored"></i>
+                            </div>
+                            <div className="languages-item">
                                 <i className="devicon-azure-plain colored"></i>
                             </div>
                             <div className="languages-item">
