@@ -340,6 +340,13 @@ function Home() {
                                     icon={faCheck}
                                     className="check-icon"
                                 />{' '}
+                                Amazon Web Services
+                            </p>
+                            <p className="content-item">
+                                <FontAwesomeIcon
+                                    icon={faCheck}
+                                    className="check-icon"
+                                />{' '}
                                 Azure Microsoft Services
                             </p>
                             <p className="content-item">
