@@ -45,7 +45,7 @@ function Home() {
                     <span className="d-block d-lg-none brand-name">Nguyễn Trung Quân</span>
                     <img
                         className="d-none d-lg-block avatar"
-                        src={require('./Images/avatar.JPG')}
+                        src={require('./Images/avatar.jpg')}
                         alt="avatar"
                     />
                 </div>
